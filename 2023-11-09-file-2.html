@@ -1,0 +1,566 @@
+<html>
+<head><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.11/codemirror.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/4.24.7/antd.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div style="margin:30px 30px 0 0"><div style="margin-bottom:15px"><b>Kernel:</b> <!-- -->Python 3 (system-wide)</div><div><div style="margin-bottom:10px"><div style="display:flex;flex-direction:row;align-items:stretch"><span style="margin-left:0" class="hidden-xs"><div style="color:#303F9F;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;margin-top:2.5px">In [<!-- -->3<!-- -->]:</div></span><div style="overflow:hidden;flex:1"><div style="width:100%;border-radius:5px;position:relative;overflow-x:hidden;border:1px solid rgb(207, 207, 207)"><pre class="CodeMirror cm-s-default  CodeMirror-wrap" style="width:100%;overflow-x:auto;line-height:normal;height:auto;font-size:inherit;margin-bottom:0;padding:10px;white-space:pre-wrap;word-wrap:break-word;word-break:normal;border:0;background:white"><div style="margin-left:0"><span class="cm-keyword">import</span><span> </span><span class="cm-variable">pandas</span><span> </span><span class="cm-keyword">as</span><span> </span><span class="cm-variable">pd</span><span>
+</span></div></pre></div></div></div><div></div></div><div style="margin-bottom:10px"><div style="display:flex;flex-direction:row;align-items:stretch"><span style="margin-left:0" class="hidden-xs"><div style="color:#303F9F;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;margin-top:2.5px">In [<!-- -->4<!-- -->]:</div></span><div style="overflow:hidden;flex:1"><div style="width:100%;border-radius:5px;position:relative;overflow-x:hidden;border:1px solid rgb(207, 207, 207)"><pre class="CodeMirror cm-s-default  CodeMirror-wrap" style="width:100%;overflow-x:auto;line-height:normal;height:auto;font-size:inherit;margin-bottom:0;padding:10px;white-space:pre-wrap;word-wrap:break-word;word-break:normal;border:0;background:white"><div style="margin-left:0"><span class="cm-variable">df</span><span> </span><span class="cm-operator">=</span><span> </span><span class="cm-variable">pd</span><span>.</span><span class="cm-property">read_csv</span><span>(</span><span class="cm-string">&quot;titanic.csv&quot;</span><span>)</span><span>
+</span><span class="cm-variable">df</span><span>.</span><span class="cm-property">head</span><span>(</span><span>)</span><span>
+</span></div></pre></div></div></div><div style="display:flex;flex-direction:row;align-items:stretch" cocalc-test="cell-output"><button type="button" class="ant-btn css-dev-only-do-not-override-byeoj0 ant-btn-text" style="border-color:transparent;font-size:inherit;padding:0;display:flex;flex-direction:column;height:auto;cursor:pointer"><span style="margin-left:0" class="hidden-xs"><div style="color:#D84315;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;padding-bottom:2px">Out[<!-- -->4<!-- -->]:</div></span><div style="flex:1"></div><span> </span></button><div style="flex:1;overflow-x:auto;line-height:normal;background-color:#fff;border:0;margin-bottom:0;margin-left:1px" class="cocalc-jupyter-rendered"><div style="margin:5px 0"><div><div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align:right">
+      <th></th>
+      <th>PassengerId</th>
+      <th>Survived</th>
+      <th>Pclass</th>
+      <th>Name</th>
+      <th>Sex</th>
+      <th>Age</th>
+      <th>SibSp</th>
+      <th>Parch</th>
+      <th>Ticket</th>
+      <th>Fare</th>
+      <th>Cabin</th>
+      <th>Embarked</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>0</td>
+      <td>3</td>
+      <td>Braund, Mr. Owen Harris</td>
+      <td>male</td>
+      <td>22.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>A/5 21171</td>
+      <td>7.2500</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Cumings, Mrs. John Bradley (Florence Briggs Th...</td>
+      <td>female</td>
+      <td>38.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>PC 17599</td>
+      <td>71.2833</td>
+      <td>C85</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>1</td>
+      <td>3</td>
+      <td>Heikkinen, Miss. Laina</td>
+      <td>female</td>
+      <td>26.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>STON/O2. 3101282</td>
+      <td>7.9250</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td>
+      <td>female</td>
+      <td>35.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>113803</td>
+      <td>53.1000</td>
+      <td>C123</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>0</td>
+      <td>3</td>
+      <td>Allen, Mr. William Henry</td>
+      <td>male</td>
+      <td>35.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>373450</td>
+      <td>8.0500</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div></div></div></div><div style="margin-bottom:10px"><div style="display:flex;flex-direction:row;align-items:stretch"><span style="margin-left:0" class="hidden-xs"><div style="color:#303F9F;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;margin-top:2.5px">In [<!-- -->5<!-- -->]:</div></span><div style="overflow:hidden;flex:1"><div style="width:100%;border-radius:5px;position:relative;overflow-x:hidden;border:1px solid rgb(207, 207, 207)"><pre class="CodeMirror cm-s-default  CodeMirror-wrap" style="width:100%;overflow-x:auto;line-height:normal;height:auto;font-size:inherit;margin-bottom:0;padding:10px;white-space:pre-wrap;word-wrap:break-word;word-break:normal;border:0;background:white"><div style="margin-left:0"><span class="cm-variable">df</span><span>.</span><span class="cm-property">drop</span><span>(</span><span>[</span><span class="cm-string">&#x27;PassengerId&#x27;</span><span>,</span><span class="cm-string">&#x27;Name&#x27;</span><span>,</span><span class="cm-string">&#x27;SibSp&#x27;</span><span>,</span><span class="cm-string">&#x27;Parch&#x27;</span><span>,</span><span class="cm-string">&#x27;Ticket&#x27;</span><span>,</span><span class="cm-string">&#x27;Cabin&#x27;</span><span>,</span><span class="cm-string">&#x27;Embarked&#x27;</span><span>]</span><span>,</span><span class="cm-variable">axis</span><span class="cm-operator">=</span><span class="cm-string">&#x27;columns&#x27;</span><span>,</span><span class="cm-variable">inplace</span><span class="cm-operator">=</span><span class="cm-keyword">True</span><span>)</span><span>
+</span><span class="cm-variable">df</span><span>.</span><span class="cm-property">head</span><span>(</span><span>)</span><span>
+</span></div></pre></div></div></div><div style="display:flex;flex-direction:row;align-items:stretch" cocalc-test="cell-output"><button type="button" class="ant-btn css-dev-only-do-not-override-byeoj0 ant-btn-text" style="border-color:transparent;font-size:inherit;padding:0;display:flex;flex-direction:column;height:auto;cursor:pointer"><span style="margin-left:0" class="hidden-xs"><div style="color:#D84315;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;padding-bottom:2px">Out[<!-- -->5<!-- -->]:</div></span><div style="flex:1"></div><span> </span></button><div style="flex:1;overflow-x:auto;line-height:normal;background-color:#fff;border:0;margin-bottom:0;margin-left:1px" class="cocalc-jupyter-rendered"><div style="margin:5px 0"><div><div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align:right">
+      <th></th>
+      <th>Survived</th>
+      <th>Pclass</th>
+      <th>Sex</th>
+      <th>Age</th>
+      <th>Fare</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>3</td>
+      <td>male</td>
+      <td>22.0</td>
+      <td>7.2500</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>1</td>
+      <td>female</td>
+      <td>38.0</td>
+      <td>71.2833</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>3</td>
+      <td>female</td>
+      <td>26.0</td>
+      <td>7.9250</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>1</td>
+      <td>female</td>
+      <td>35.0</td>
+      <td>53.1000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>3</td>
+      <td>male</td>
+      <td>35.0</td>
+      <td>8.0500</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div></div></div></div><div style="margin-bottom:10px"><div style="display:flex;flex-direction:row;align-items:stretch"><span style="margin-left:0" class="hidden-xs"><div style="color:#303F9F;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;margin-top:2.5px">In [<!-- -->6<!-- -->]:</div></span><div style="overflow:hidden;flex:1"><div style="width:100%;border-radius:5px;position:relative;overflow-x:hidden;border:1px solid rgb(207, 207, 207)"><pre class="CodeMirror cm-s-default  CodeMirror-wrap" style="width:100%;overflow-x:auto;line-height:normal;height:auto;font-size:inherit;margin-bottom:0;padding:10px;white-space:pre-wrap;word-wrap:break-word;word-break:normal;border:0;background:white"><div style="margin-left:0"><span class="cm-comment"># 1-Survived 0-not Survived</span><span>
+</span><span class="cm-variable">inputs</span><span> </span><span class="cm-operator">=</span><span> </span><span class="cm-variable">df</span><span>.</span><span class="cm-property">drop</span><span>(</span><span class="cm-string">&#x27;Survived&#x27;</span><span>,</span><span class="cm-variable">axis</span><span class="cm-operator">=</span><span class="cm-string">&#x27;columns&#x27;</span><span>)</span><span>
+</span><span class="cm-variable">target</span><span> </span><span class="cm-operator">=</span><span> </span><span class="cm-variable">df</span><span>.</span><span class="cm-property">Survived</span><span>
+</span></div></pre></div></div></div><div></div></div><div style="margin-bottom:10px"><div style="display:flex;flex-direction:row;align-items:stretch"><span style="margin-left:0" class="hidden-xs"><div style="color:#303F9F;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;margin-top:2.5px">In [<!-- -->7<!-- -->]:</div></span><div style="overflow:hidden;flex:1"><div style="width:100%;border-radius:5px;position:relative;overflow-x:hidden;border:1px solid rgb(207, 207, 207)"><pre class="CodeMirror cm-s-default  CodeMirror-wrap" style="width:100%;overflow-x:auto;line-height:normal;height:auto;font-size:inherit;margin-bottom:0;padding:10px;white-space:pre-wrap;word-wrap:break-word;word-break:normal;border:0;background:white"><div style="margin-left:0"><span class="cm-comment">#inputs.Sex = inputs.Sex.map({&#x27;male&#x27;: 1, &#x27;female&#x27;: 2})</span><span>
+</span><span class="cm-variable">dummies</span><span> </span><span class="cm-operator">=</span><span> </span><span class="cm-variable">pd</span><span>.</span><span class="cm-property">get_dummies</span><span>(</span><span class="cm-variable">inputs</span><span>.</span><span class="cm-property">Sex</span><span>)</span><span>
+</span><span class="cm-variable">dummies</span><span>.</span><span class="cm-property">head</span><span>(</span><span class="cm-number">3</span><span>)</span><span>
+</span></div></pre></div></div></div><div style="display:flex;flex-direction:row;align-items:stretch" cocalc-test="cell-output"><button type="button" class="ant-btn css-dev-only-do-not-override-byeoj0 ant-btn-text" style="border-color:transparent;font-size:inherit;padding:0;display:flex;flex-direction:column;height:auto;cursor:pointer"><span style="margin-left:0" class="hidden-xs"><div style="color:#D84315;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;padding-bottom:2px">Out[<!-- -->7<!-- -->]:</div></span><div style="flex:1"></div><span> </span></button><div style="flex:1;overflow-x:auto;line-height:normal;background-color:#fff;border:0;margin-bottom:0;margin-left:1px" class="cocalc-jupyter-rendered"><div style="margin:5px 0"><div><div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align:right">
+      <th></th>
+      <th>female</th>
+      <th>male</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>False</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>True</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>True</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div></div></div></div><div style="margin-bottom:10px"><div style="display:flex;flex-direction:row;align-items:stretch"><span style="margin-left:0" class="hidden-xs"><div style="color:#303F9F;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;margin-top:2.5px">In [<!-- -->8<!-- -->]:</div></span><div style="overflow:hidden;flex:1"><div style="width:100%;border-radius:5px;position:relative;overflow-x:hidden;border:1px solid rgb(207, 207, 207)"><pre class="CodeMirror cm-s-default  CodeMirror-wrap" style="width:100%;overflow-x:auto;line-height:normal;height:auto;font-size:inherit;margin-bottom:0;padding:10px;white-space:pre-wrap;word-wrap:break-word;word-break:normal;border:0;background:white"><div style="margin-left:0"><span class="cm-variable">inputs</span><span> </span><span class="cm-operator">=</span><span> </span><span class="cm-variable">pd</span><span>.</span><span class="cm-property">concat</span><span>(</span><span>[</span><span class="cm-variable">inputs</span><span>,</span><span class="cm-variable">dummies</span><span>]</span><span>,</span><span class="cm-variable">axis</span><span class="cm-operator">=</span><span class="cm-string">&#x27;columns&#x27;</span><span>)</span><span>
+</span><span class="cm-variable">inputs</span><span>.</span><span class="cm-property">head</span><span>(</span><span class="cm-number">3</span><span>)</span><span>
+</span></div></pre></div></div></div><div style="display:flex;flex-direction:row;align-items:stretch" cocalc-test="cell-output"><button type="button" class="ant-btn css-dev-only-do-not-override-byeoj0 ant-btn-text" style="border-color:transparent;font-size:inherit;padding:0;display:flex;flex-direction:column;height:auto;cursor:pointer"><span style="margin-left:0" class="hidden-xs"><div style="color:#D84315;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;padding-bottom:2px">Out[<!-- -->8<!-- -->]:</div></span><div style="flex:1"></div><span> </span></button><div style="flex:1;overflow-x:auto;line-height:normal;background-color:#fff;border:0;margin-bottom:0;margin-left:1px" class="cocalc-jupyter-rendered"><div style="margin:5px 0"><div><div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align:right">
+      <th></th>
+      <th>Pclass</th>
+      <th>Sex</th>
+      <th>Age</th>
+      <th>Fare</th>
+      <th>female</th>
+      <th>male</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>male</td>
+      <td>22.0</td>
+      <td>7.2500</td>
+      <td>False</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>female</td>
+      <td>38.0</td>
+      <td>71.2833</td>
+      <td>True</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>female</td>
+      <td>26.0</td>
+      <td>7.9250</td>
+      <td>True</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div></div></div></div><div style="margin-bottom:10px"><div style="display:flex;flex-direction:row;align-items:stretch"><span style="margin-left:0" class="hidden-xs"><div style="color:#303F9F;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;margin-top:2.5px">In [<!-- -->9<!-- -->]:</div></span><div style="overflow:hidden;flex:1"><div style="width:100%;border-radius:5px;position:relative;overflow-x:hidden;border:1px solid rgb(207, 207, 207)"><pre class="CodeMirror cm-s-default  CodeMirror-wrap" style="width:100%;overflow-x:auto;line-height:normal;height:auto;font-size:inherit;margin-bottom:0;padding:10px;white-space:pre-wrap;word-wrap:break-word;word-break:normal;border:0;background:white"><div style="margin-left:0"><span class="cm-variable">inputs</span><span>.</span><span class="cm-property">drop</span><span>(</span><span>[</span><span class="cm-string">&#x27;Sex&#x27;</span><span>,</span><span class="cm-string">&#x27;male&#x27;</span><span>]</span><span>,</span><span class="cm-variable">axis</span><span class="cm-operator">=</span><span class="cm-string">&#x27;columns&#x27;</span><span>,</span><span class="cm-variable">inplace</span><span class="cm-operator">=</span><span class="cm-keyword">True</span><span>)</span><span>
+</span><span class="cm-variable">inputs</span><span>.</span><span class="cm-property">head</span><span>(</span><span class="cm-number">3</span><span>)</span><span>
+</span></div></pre></div></div></div><div style="display:flex;flex-direction:row;align-items:stretch" cocalc-test="cell-output"><button type="button" class="ant-btn css-dev-only-do-not-override-byeoj0 ant-btn-text" style="border-color:transparent;font-size:inherit;padding:0;display:flex;flex-direction:column;height:auto;cursor:pointer"><span style="margin-left:0" class="hidden-xs"><div style="color:#D84315;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;padding-bottom:2px">Out[<!-- -->9<!-- -->]:</div></span><div style="flex:1"></div><span> </span></button><div style="flex:1;overflow-x:auto;line-height:normal;background-color:#fff;border:0;margin-bottom:0;margin-left:1px" class="cocalc-jupyter-rendered"><div style="margin:5px 0"><div><div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align:right">
+      <th></th>
+      <th>Pclass</th>
+      <th>Age</th>
+      <th>Fare</th>
+      <th>female</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>22.0</td>
+      <td>7.2500</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>38.0</td>
+      <td>71.2833</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>26.0</td>
+      <td>7.9250</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div></div></div></div><div style="margin-bottom:10px"><div style="display:flex;flex-direction:row;align-items:stretch"><span style="margin-left:0" class="hidden-xs"><div style="color:#303F9F;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;margin-top:2.5px">In [<!-- -->11<!-- -->]:</div></span><div style="overflow:hidden;flex:1"><div style="width:100%;border-radius:5px;position:relative;overflow-x:hidden;border:1px solid rgb(207, 207, 207)"><pre class="CodeMirror cm-s-default  CodeMirror-wrap" style="width:100%;overflow-x:auto;line-height:normal;height:auto;font-size:inherit;margin-bottom:0;padding:10px;white-space:pre-wrap;word-wrap:break-word;word-break:normal;border:0;background:white"><div style="margin-left:0"><span class="cm-variable">inputs</span><span>.</span><span class="cm-property">columns</span><span>[</span><span class="cm-variable">inputs</span><span>.</span><span class="cm-property">isna</span><span>(</span><span>)</span><span>.</span><span class="cm-property">any</span><span>(</span><span>)</span><span>
+</span></div></pre></div></div></div><div style="display:flex;flex-direction:row;align-items:stretch" cocalc-test="cell-output"><button type="button" class="ant-btn css-dev-only-do-not-override-byeoj0 ant-btn-text" style="border-color:transparent;font-size:inherit;padding:0;display:flex;flex-direction:column;height:auto;cursor:pointer"><span style="margin-left:0" class="hidden-xs"><div style="color:#D84315;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;padding-bottom:2px">Out[<!-- -->11<!-- -->]:</div></span><div style="flex:1"></div><span> </span></button><div style="flex:1;overflow-x:auto;line-height:normal;background-color:#fff;border:0;margin-bottom:0;margin-left:1px" class="cocalc-jupyter-rendered"><div style="background-color:#f9f2f4;white-space:pre-wrap;word-wrap:break-word;font-family:monospace;padding-top:5px;padding-bottom:5px"><code><span style="color:rgb(0, 187, 187)">  File </span><span style="color:rgb(0, 187, 0)">&quot;/tmp/ipykernel_419/1480638524.py&quot;</span><span style="color:rgb(0, 187, 187)">, line </span><span style="color:rgb(0, 187, 0)">1</span><span>
+</span><span style="color:rgb(187, 0, 0)">    inputs.columns[inputs.isna().any()</span><span>
+</span><span>                                      ^</span><span>
+</span><span style="color:rgb(187, 0, 0)">SyntaxError</span><span style="color:rgb(187, 0, 0)">:</span><span> incomplete input
+</span></code></div></div></div></div><div style="margin-bottom:10px"><div style="display:flex;flex-direction:row;align-items:stretch"><span style="margin-left:0" class="hidden-xs"><div style="color:#303F9F;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;margin-top:2.5px">In [<!-- -->0<!-- -->]:</div></span><div style="overflow:hidden;flex:1"><div style="width:100%;border-radius:5px;position:relative;overflow-x:hidden;border:1px solid rgb(207, 207, 207)"><pre class="CodeMirror cm-s-default  CodeMirror-wrap" style="width:100%;overflow-x:auto;line-height:normal;height:auto;font-size:inherit;margin-bottom:0;padding:10px;white-space:pre-wrap;word-wrap:break-word;word-break:normal;border:0;background:white"><div style="margin-left:0"><span class="cm-variable">inputs</span><span>.</span><span class="cm-property">columns</span><span>[</span><span class="cm-variable">inputs</span><span>.</span><span class="cm-property">isna</span><span>(</span><span>)</span><span>.</span><span class="cm-property">any</span><span>(</span><span>)</span><span>]</span><span>
+</span><span class="cm-variable">Index</span><span>(</span><span>[</span><span class="cm-string">&#x27;Age&#x27;</span><span>]</span><span>,</span><span> </span><span class="cm-variable">dtype</span><span class="cm-operator">=</span><span class="cm-string">&#x27;object&#x27;</span><span>)</span><span>
+</span></div></pre></div></div></div><div></div></div><div style="margin-bottom:10px"><div style="display:flex;flex-direction:row;align-items:stretch"><span style="margin-left:0" class="hidden-xs"><div style="color:#303F9F;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;margin-top:2.5px">In [<!-- -->12<!-- -->]:</div></span><div style="overflow:hidden;flex:1"><div style="width:100%;border-radius:5px;position:relative;overflow-x:hidden;border:1px solid rgb(207, 207, 207)"><pre class="CodeMirror cm-s-default  CodeMirror-wrap" style="width:100%;overflow-x:auto;line-height:normal;height:auto;font-size:inherit;margin-bottom:0;padding:10px;white-space:pre-wrap;word-wrap:break-word;word-break:normal;border:0;background:white"><div style="margin-left:0"><span class="cm-variable">inputs</span><span>.</span><span class="cm-property">Age</span><span> </span><span class="cm-operator">=</span><span> </span><span class="cm-variable">inputs</span><span>.</span><span class="cm-property">Age</span><span>.</span><span class="cm-property">fillna</span><span>(</span><span class="cm-variable">inputs</span><span>.</span><span class="cm-property">Age</span><span>.</span><span class="cm-property">mean</span><span>(</span><span>)</span><span>)</span><span>
+</span><span class="cm-variable">inputs</span><span>.</span><span class="cm-property">head</span><span>(</span><span class="cm-number">6</span><span>)</span><span>
+</span></div></pre></div></div></div><div style="display:flex;flex-direction:row;align-items:stretch" cocalc-test="cell-output"><button type="button" class="ant-btn css-dev-only-do-not-override-byeoj0 ant-btn-text" style="border-color:transparent;font-size:inherit;padding:0;display:flex;flex-direction:column;height:auto;cursor:pointer"><span style="margin-left:0" class="hidden-xs"><div style="color:#D84315;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;padding-bottom:2px">Out[<!-- -->12<!-- -->]:</div></span><div style="flex:1"></div><span> </span></button><div style="flex:1;overflow-x:auto;line-height:normal;background-color:#fff;border:0;margin-bottom:0;margin-left:1px" class="cocalc-jupyter-rendered"><div style="margin:5px 0"><div><div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align:right">
+      <th></th>
+      <th>Pclass</th>
+      <th>Age</th>
+      <th>Fare</th>
+      <th>female</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>22.000000</td>
+      <td>7.2500</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>38.000000</td>
+      <td>71.2833</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>26.000000</td>
+      <td>7.9250</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>35.000000</td>
+      <td>53.1000</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>3</td>
+      <td>35.000000</td>
+      <td>8.0500</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>3</td>
+      <td>29.699118</td>
+      <td>8.4583</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div></div></div></div><div style="margin-bottom:10px"><div style="display:flex;flex-direction:row;align-items:stretch"><span style="margin-left:0" class="hidden-xs"><div style="color:#303F9F;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;margin-top:2.5px">In [<!-- -->13<!-- -->]:</div></span><div style="overflow:hidden;flex:1"><div style="width:100%;border-radius:5px;position:relative;overflow-x:hidden;border:1px solid rgb(207, 207, 207)"><pre class="CodeMirror cm-s-default  CodeMirror-wrap" style="width:100%;overflow-x:auto;line-height:normal;height:auto;font-size:inherit;margin-bottom:0;padding:10px;white-space:pre-wrap;word-wrap:break-word;word-break:normal;border:0;background:white"><div style="margin-left:0"><span class="cm-keyword">from</span><span> </span><span class="cm-variable">sklearn</span><span>.</span><span class="cm-property">model_selection</span><span> </span><span class="cm-keyword">import</span><span> </span><span class="cm-variable">train_test_split</span><span>
+</span><span class="cm-variable">X_train</span><span>,</span><span> </span><span class="cm-variable">X_test</span><span>,</span><span> </span><span class="cm-variable">y_train</span><span>,</span><span> </span><span class="cm-variable">y_test</span><span> </span><span class="cm-operator">=</span><span> </span><span class="cm-variable">train_test_split</span><span>(</span><span class="cm-variable">inputs</span><span>,</span><span class="cm-variable">target</span><span>,</span><span class="cm-variable">test_size</span><span class="cm-operator">=</span><span class="cm-number">0.2</span><span>)</span><span>
+</span></div></pre></div></div></div><div></div></div><div style="margin-bottom:10px"><div style="display:flex;flex-direction:row;align-items:stretch"><span style="margin-left:0" class="hidden-xs"><div style="color:#303F9F;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;margin-top:2.5px">In [<!-- -->14<!-- -->]:</div></span><div style="overflow:hidden;flex:1"><div style="width:100%;border-radius:5px;position:relative;overflow-x:hidden;border:1px solid rgb(207, 207, 207)"><pre class="CodeMirror cm-s-default  CodeMirror-wrap" style="width:100%;overflow-x:auto;line-height:normal;height:auto;font-size:inherit;margin-bottom:0;padding:10px;white-space:pre-wrap;word-wrap:break-word;word-break:normal;border:0;background:white"><div style="margin-left:0"><span class="cm-keyword">from</span><span> </span><span class="cm-variable">sklearn</span><span>.</span><span class="cm-property">naive_bayes</span><span> </span><span class="cm-keyword">import</span><span> </span><span class="cm-variable">GaussianNB</span><span>
+</span><span class="cm-variable">model</span><span> </span><span class="cm-operator">=</span><span> </span><span class="cm-variable">GaussianNB</span><span>(</span><span>)</span><span>
+</span></div></pre></div></div></div><div></div></div><div style="margin-bottom:10px"><div style="display:flex;flex-direction:row;align-items:stretch"><span style="margin-left:0" class="hidden-xs"><div style="color:#303F9F;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;margin-top:2.5px">In [<!-- -->15<!-- -->]:</div></span><div style="overflow:hidden;flex:1"><div style="width:100%;border-radius:5px;position:relative;overflow-x:hidden;border:1px solid rgb(207, 207, 207)"><pre class="CodeMirror cm-s-default  CodeMirror-wrap" style="width:100%;overflow-x:auto;line-height:normal;height:auto;font-size:inherit;margin-bottom:0;padding:10px;white-space:pre-wrap;word-wrap:break-word;word-break:normal;border:0;background:white"><div style="margin-left:0"><span class="cm-variable">model</span><span>.</span><span class="cm-property">fit</span><span>(</span><span class="cm-variable">X_train</span><span>,</span><span class="cm-variable">y_train</span><span>)</span><span>
+</span></div></pre></div></div></div><div style="display:flex;flex-direction:row;align-items:stretch" cocalc-test="cell-output"><button type="button" class="ant-btn css-dev-only-do-not-override-byeoj0 ant-btn-text" style="border-color:transparent;font-size:inherit;padding:0;display:flex;flex-direction:column;height:auto;cursor:pointer"><span style="margin-left:0" class="hidden-xs"><div style="color:#D84315;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;padding-bottom:2px">Out[<!-- -->15<!-- -->]:</div></span><div style="flex:1"></div><span> </span></button><div style="flex:1;overflow-x:auto;line-height:normal;background-color:#fff;border:0;margin-bottom:0;margin-left:1px" class="cocalc-jupyter-rendered"><div style="margin:5px 0"><div><style>#sk-container-id-1 {color: black;}#sk-container-id-1 pre{padding: 0;}#sk-container-id-1 div.sk-toggleable {background-color: white;}#sk-container-id-1 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-1 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-1 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-1 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-1 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-1 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-1 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-1 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-1 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-1 div.sk-item {position: relative;z-index: 1;}#sk-container-id-1 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-1 div.sk-item::before, #sk-container-id-1 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-1 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-1 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-1 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-1 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-1 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-1 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-1 div.sk-label-container {text-align: center;}#sk-container-id-1 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-1 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>GaussianNB()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br/>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" checked=""/><label for="sk-estimator-id-1" class="sk-toggleable__label sk-toggleable__label-arrow">GaussianNB</label><div class="sk-toggleable__content"><pre>GaussianNB()</pre></div></div></div></div></div></div></div></div></div></div><div style="margin-bottom:10px"><div style="display:flex;flex-direction:row;align-items:stretch"><span style="margin-left:0" class="hidden-xs"><div style="color:#303F9F;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;margin-top:2.5px">In [<!-- -->16<!-- -->]:</div></span><div style="overflow:hidden;flex:1"><div style="width:100%;border-radius:5px;position:relative;overflow-x:hidden;border:1px solid rgb(207, 207, 207)"><pre class="CodeMirror cm-s-default  CodeMirror-wrap" style="width:100%;overflow-x:auto;line-height:normal;height:auto;font-size:inherit;margin-bottom:0;padding:10px;white-space:pre-wrap;word-wrap:break-word;word-break:normal;border:0;background:white"><div style="margin-left:0"><span class="cm-variable">model</span><span>.</span><span class="cm-property">score</span><span>(</span><span class="cm-variable">X_test</span><span>,</span><span class="cm-variable">y_test</span><span>)</span><span>
+</span></div></pre></div></div></div><div style="display:flex;flex-direction:row;align-items:stretch" cocalc-test="cell-output"><button type="button" class="ant-btn css-dev-only-do-not-override-byeoj0 ant-btn-text" style="border-color:transparent;font-size:inherit;padding:0;display:flex;flex-direction:column;height:auto;cursor:pointer"><span style="margin-left:0" class="hidden-xs"><div style="color:#D84315;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;padding-bottom:2px">Out[<!-- -->16<!-- -->]:</div></span><div style="flex:1"></div><span> </span></button><div style="flex:1;overflow-x:auto;line-height:normal;background-color:#fff;border:0;margin-bottom:0;margin-left:1px" class="cocalc-jupyter-rendered"><div style="white-space:pre-wrap;word-wrap:break-word;font-family:monospace;padding-top:5px;padding-bottom:5px"><span>0.7597765363128491</span></div></div></div></div><div style="margin-bottom:10px"><div style="display:flex;flex-direction:row;align-items:stretch"><span style="margin-left:0" class="hidden-xs"><div style="color:#303F9F;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;margin-top:2.5px">In [<!-- -->17<!-- -->]:</div></span><div style="overflow:hidden;flex:1"><div style="width:100%;border-radius:5px;position:relative;overflow-x:hidden;border:1px solid rgb(207, 207, 207)"><pre class="CodeMirror cm-s-default  CodeMirror-wrap" style="width:100%;overflow-x:auto;line-height:normal;height:auto;font-size:inherit;margin-bottom:0;padding:10px;white-space:pre-wrap;word-wrap:break-word;word-break:normal;border:0;background:white"><div style="margin-left:0"><span class="cm-variable">X_test</span><span>[</span><span class="cm-number">0</span><span>:</span><span class="cm-number">10</span><span>]</span><span>
+</span></div></pre></div></div></div><div style="display:flex;flex-direction:row;align-items:stretch" cocalc-test="cell-output"><button type="button" class="ant-btn css-dev-only-do-not-override-byeoj0 ant-btn-text" style="border-color:transparent;font-size:inherit;padding:0;display:flex;flex-direction:column;height:auto;cursor:pointer"><span style="margin-left:0" class="hidden-xs"><div style="color:#D84315;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;padding-bottom:2px">Out[<!-- -->17<!-- -->]:</div></span><div style="flex:1"></div><span> </span></button><div style="flex:1;overflow-x:auto;line-height:normal;background-color:#fff;border:0;margin-bottom:0;margin-left:1px" class="cocalc-jupyter-rendered"><div style="margin:5px 0"><div><div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align:right">
+      <th></th>
+      <th>Pclass</th>
+      <th>Age</th>
+      <th>Fare</th>
+      <th>female</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>462</th>
+      <td>1</td>
+      <td>47.000000</td>
+      <td>38.5000</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>226</th>
+      <td>2</td>
+      <td>19.000000</td>
+      <td>10.5000</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>283</th>
+      <td>3</td>
+      <td>19.000000</td>
+      <td>8.0500</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>739</th>
+      <td>3</td>
+      <td>29.699118</td>
+      <td>7.8958</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td>1</td>
+      <td>71.000000</td>
+      <td>34.6542</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>328</th>
+      <td>3</td>
+      <td>31.000000</td>
+      <td>20.5250</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>519</th>
+      <td>3</td>
+      <td>32.000000</td>
+      <td>7.8958</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>297</th>
+      <td>1</td>
+      <td>2.000000</td>
+      <td>151.5500</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>690</th>
+      <td>1</td>
+      <td>31.000000</td>
+      <td>57.0000</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>847</th>
+      <td>3</td>
+      <td>35.000000</td>
+      <td>7.8958</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div></div></div></div><div style="margin-bottom:10px"><div style="display:flex;flex-direction:row;align-items:stretch"><span style="margin-left:0" class="hidden-xs"><div style="color:#303F9F;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;margin-top:2.5px">In [<!-- -->18<!-- -->]:</div></span><div style="overflow:hidden;flex:1"><div style="width:100%;border-radius:5px;position:relative;overflow-x:hidden;border:1px solid rgb(207, 207, 207)"><pre class="CodeMirror cm-s-default  CodeMirror-wrap" style="width:100%;overflow-x:auto;line-height:normal;height:auto;font-size:inherit;margin-bottom:0;padding:10px;white-space:pre-wrap;word-wrap:break-word;word-break:normal;border:0;background:white"><div style="margin-left:0"><span class="cm-variable">y_test</span><span>[</span><span class="cm-number">0</span><span>:</span><span class="cm-number">10</span><span>]</span><span>
+</span></div></pre></div></div></div><div style="display:flex;flex-direction:row;align-items:stretch" cocalc-test="cell-output"><button type="button" class="ant-btn css-dev-only-do-not-override-byeoj0 ant-btn-text" style="border-color:transparent;font-size:inherit;padding:0;display:flex;flex-direction:column;height:auto;cursor:pointer"><span style="margin-left:0" class="hidden-xs"><div style="color:#D84315;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;padding-bottom:2px">Out[<!-- -->18<!-- -->]:</div></span><div style="flex:1"></div><span> </span></button><div style="flex:1;overflow-x:auto;line-height:normal;background-color:#fff;border:0;margin-bottom:0;margin-left:1px" class="cocalc-jupyter-rendered"><div style="white-space:pre-wrap;word-wrap:break-word;font-family:monospace;padding-top:5px;padding-bottom:5px"><span>462    0
+226    1
+283    1
+739    0
+96     0
+328    1
+519    0
+297    0
+690    1
+847    0
+Name: Survived, dtype: int64</span></div></div></div></div><div style="margin-bottom:10px"><div style="display:flex;flex-direction:row;align-items:stretch"><span style="margin-left:0" class="hidden-xs"><div style="color:#303F9F;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;margin-top:2.5px">In [<!-- -->19<!-- -->]:</div></span><div style="overflow:hidden;flex:1"><div style="width:100%;border-radius:5px;position:relative;overflow-x:hidden;border:1px solid rgb(207, 207, 207)"><pre class="CodeMirror cm-s-default  CodeMirror-wrap" style="width:100%;overflow-x:auto;line-height:normal;height:auto;font-size:inherit;margin-bottom:0;padding:10px;white-space:pre-wrap;word-wrap:break-word;word-break:normal;border:0;background:white"><div style="margin-left:0"><span class="cm-variable">model</span><span>.</span><span class="cm-property">predict</span><span>(</span><span class="cm-variable">X_test</span><span>[</span><span class="cm-number">0</span><span>:</span><span class="cm-number">10</span><span>]</span><span>)</span><span>
+</span></div></pre></div></div></div><div style="display:flex;flex-direction:row;align-items:stretch" cocalc-test="cell-output"><button type="button" class="ant-btn css-dev-only-do-not-override-byeoj0 ant-btn-text" style="border-color:transparent;font-size:inherit;padding:0;display:flex;flex-direction:column;height:auto;cursor:pointer"><span style="margin-left:0" class="hidden-xs"><div style="color:#D84315;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;padding-bottom:2px">Out[<!-- -->19<!-- -->]:</div></span><div style="flex:1"></div><span> </span></button><div style="flex:1;overflow-x:auto;line-height:normal;background-color:#fff;border:0;margin-bottom:0;margin-left:1px" class="cocalc-jupyter-rendered"><div style="white-space:pre-wrap;word-wrap:break-word;font-family:monospace;padding-top:5px;padding-bottom:5px"><span>array([0, 0, 0, 0, 1, 1, 0, 1, 0, 0])</span></div></div></div></div><div style="margin-bottom:10px"><div style="display:flex;flex-direction:row;align-items:stretch"><span style="margin-left:0" class="hidden-xs"><div style="color:#303F9F;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;margin-top:2.5px">In [<!-- -->20<!-- -->]:</div></span><div style="overflow:hidden;flex:1"><div style="width:100%;border-radius:5px;position:relative;overflow-x:hidden;border:1px solid rgb(207, 207, 207)"><pre class="CodeMirror cm-s-default  CodeMirror-wrap" style="width:100%;overflow-x:auto;line-height:normal;height:auto;font-size:inherit;margin-bottom:0;padding:10px;white-space:pre-wrap;word-wrap:break-word;word-break:normal;border:0;background:white"><div style="margin-left:0"><span class="cm-variable">model</span><span>.</span><span class="cm-property">predict_proba</span><span>(</span><span class="cm-variable">X_test</span><span>[</span><span>:</span><span class="cm-number">10</span><span>]</span><span>)</span><span>
+</span></div></pre></div></div></div><div style="display:flex;flex-direction:row;align-items:stretch" cocalc-test="cell-output"><button type="button" class="ant-btn css-dev-only-do-not-override-byeoj0 ant-btn-text" style="border-color:transparent;font-size:inherit;padding:0;display:flex;flex-direction:column;height:auto;cursor:pointer"><span style="margin-left:0" class="hidden-xs"><div style="color:#D84315;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;padding-bottom:2px">Out[<!-- -->20<!-- -->]:</div></span><div style="flex:1"></div><span> </span></button><div style="flex:1;overflow-x:auto;line-height:normal;background-color:#fff;border:0;margin-bottom:0;margin-left:1px" class="cocalc-jupyter-rendered"><div style="white-space:pre-wrap;word-wrap:break-word;font-family:monospace;padding-top:5px;padding-bottom:5px"><span>array([[7.29635423e-01, 2.70364577e-01],
+       [9.25170874e-01, 7.48291260e-02],
+       [9.65472624e-01, 3.45273760e-02],
+       [9.71302305e-01, 2.86976950e-02],
+       [4.99693564e-01, 5.00306436e-01],
+       [4.54033232e-01, 5.45966768e-01],
+       [9.71699655e-01, 2.83003455e-02],
+       [1.16840678e-05, 9.99988316e-01],
+       [6.46173699e-01, 3.53826301e-01],
+       [9.71820516e-01, 2.81794843e-02]])</span></div></div></div></div><div style="margin-bottom:10px"><div style="display:flex;flex-direction:row;align-items:stretch"><span style="margin-left:0" class="hidden-xs"><div style="color:#303F9F;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;margin-top:2.5px">In [<!-- -->21<!-- -->]:</div></span><div style="overflow:hidden;flex:1"><div style="width:100%;border-radius:5px;position:relative;overflow-x:hidden;border:1px solid rgb(207, 207, 207)"><pre class="CodeMirror cm-s-default  CodeMirror-wrap" style="width:100%;overflow-x:auto;line-height:normal;height:auto;font-size:inherit;margin-bottom:0;padding:10px;white-space:pre-wrap;word-wrap:break-word;word-break:normal;border:0;background:white"><div style="margin-left:0"><span class="cm-comment"># pclass, Age, Fare, Gender</span><span>
+</span><span class="cm-variable">test</span><span> </span><span class="cm-operator">=</span><span> </span><span>[</span><span>[</span><span class="cm-number">1</span><span>,</span><span class="cm-number">23.000000</span><span>,</span><span class="cm-number">13.2750</span><span>,</span><span class="cm-number">0</span><span>]</span><span>]</span><span>
+</span><span class="cm-comment"># test = X_test</span><span>
+</span><span class="cm-variable">a</span><span> </span><span class="cm-operator">=</span><span> </span><span class="cm-variable">model</span><span>.</span><span class="cm-property">predict</span><span>(</span><span class="cm-variable">test</span><span>)</span><span>
+</span><span class="cm-keyword">if</span><span> </span><span class="cm-variable">a</span><span>[</span><span class="cm-number">0</span><span>]</span><span> </span><span class="cm-operator">==</span><span class="cm-number">0</span><span>:</span><span>
+</span><span>    </span><span class="cm-builtin">print</span><span>(</span><span class="cm-string">&quot;Not Survived&quot;</span><span>)</span><span>
+</span><span class="cm-keyword">else</span><span>:</span><span>
+</span><span>    </span><span class="cm-builtin">print</span><span>(</span><span class="cm-string">&quot;Survived&quot;</span><span>)</span><span>
+</span><span class="cm-comment"># print(X_test)</span><span>
+</span></div></pre></div></div></div><div style="display:flex;flex-direction:row;align-items:stretch" cocalc-test="cell-output"><button type="button" class="ant-btn css-dev-only-do-not-override-byeoj0 ant-btn-text" style="border-color:transparent;font-size:inherit;padding:0;display:flex;flex-direction:column;height:auto;cursor:pointer"><span style="margin-left:0" class="hidden-xs"><div style="color:#D84315;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;padding-bottom:2px">Out[<!-- -->21<!-- -->]:</div></span><div style="flex:1"></div><span> </span></button><div style="flex:1;overflow-x:auto;line-height:normal;background-color:#fff;border:0;margin-bottom:0;margin-left:1px" class="cocalc-jupyter-rendered"><div style="white-space:pre-wrap;word-wrap:break-word;font-family:monospace;padding-top:5px;padding-bottom:5px"><span>Not Survived
+</span></div><div style="background-color:#fdd;white-space:pre-wrap;word-wrap:break-word;font-family:monospace;padding-top:5px;padding-bottom:5px"><span>/usr/local/lib/python3.10/dist-packages/sklearn/base.py:465: UserWarning: X does not have valid feature names, but GaussianNB was fitted with feature names
+  warnings.warn(
+</span></div></div></div></div><div style="margin-bottom:10px"><div style="display:flex;flex-direction:row;align-items:stretch"><span style="margin-left:0" class="hidden-xs"><div style="color:#303F9F;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;margin-top:2.5px">In [<!-- -->22<!-- -->]:</div></span><div style="overflow:hidden;flex:1"><div style="width:100%;border-radius:5px;position:relative;overflow-x:hidden;border:1px solid rgb(207, 207, 207)"><pre class="CodeMirror cm-s-default  CodeMirror-wrap" style="width:100%;overflow-x:auto;line-height:normal;height:auto;font-size:inherit;margin-bottom:0;padding:10px;white-space:pre-wrap;word-wrap:break-word;word-break:normal;border:0;background:white"><div style="margin-left:0"><span class="cm-keyword">from</span><span> </span><span class="cm-variable">sklearn</span><span>.</span><span class="cm-property">model_selection</span><span> </span><span class="cm-keyword">import</span><span> </span><span class="cm-variable">cross_val_score</span><span>
+</span><span class="cm-variable">cross_val_score</span><span>(</span><span class="cm-variable">GaussianNB</span><span>(</span><span>)</span><span>,</span><span class="cm-variable">X_train</span><span>,</span><span> </span><span class="cm-variable">y_train</span><span>,</span><span> </span><span class="cm-variable">cv</span><span class="cm-operator">=</span><span class="cm-number">5</span><span>)</span><span>
+</span></div></pre></div></div></div><div style="display:flex;flex-direction:row;align-items:stretch" cocalc-test="cell-output"><button type="button" class="ant-btn css-dev-only-do-not-override-byeoj0 ant-btn-text" style="border-color:transparent;font-size:inherit;padding:0;display:flex;flex-direction:column;height:auto;cursor:pointer"><span style="margin-left:0" class="hidden-xs"><div style="color:#D84315;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;padding-bottom:2px">Out[<!-- -->22<!-- -->]:</div></span><div style="flex:1"></div><span> </span></button><div style="flex:1;overflow-x:auto;line-height:normal;background-color:#fff;border:0;margin-bottom:0;margin-left:1px" class="cocalc-jupyter-rendered"><div style="white-space:pre-wrap;word-wrap:break-word;font-family:monospace;padding-top:5px;padding-bottom:5px"><span>array([0.8041958 , 0.74125874, 0.80985915, 0.78873239, 0.72535211])</span></div></div></div></div><div style="margin-bottom:10px"><div style="display:flex;flex-direction:row;align-items:stretch"><span style="margin-left:0" class="hidden-xs"><div style="color:#303F9F;min-width:7em;font-family:monospace;text-align:right;padding-right:5px;margin-top:2.5px">In [<!-- -->0<!-- -->]:</div></span><div style="overflow:hidden;flex:1"><div style="width:100%;border-radius:5px;position:relative;overflow-x:hidden;border:1px solid rgb(207, 207, 207)"><pre class="CodeMirror cm-s-default  CodeMirror-wrap" style="width:100%;overflow-x:auto;line-height:normal;height:auto;font-size:inherit;margin-bottom:0;padding:10px;white-space:pre-wrap;word-wrap:break-word;word-break:normal;border:0;background:white"><div style="margin-left:0"><span>
+</span></div></pre></div></div></div><div></div></div></div></div>
+</body>
